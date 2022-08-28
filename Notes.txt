@@ -1,0 +1,160 @@
+Git Class 01
+1. Why do we need GIT???
+2. What is GIT?
+GIt is a version control tool,
+that keep tracks of all the changes that we make in our code and store
+them in the "LOCAL" repository
+Versions==> any changes that we make in a code creates a new version of it
+PROBELM!!!!How to communicate to git???
+We can use commands to communicate to GIT
+These are unix style commands
+Where to give these commands??????
+On windows we can give commands on GIT BASH
+ON MAC we have TERMINAL where we can give these commands
+=================================================================
+Lets learn basic UNIX commands
+to navigate into our machine
+1. Open your gitbash in windows     !! open your TERMINAL
+type in whoami ==> will return you  your computer name
+2. LEts assume that Temrinal is MR TERMINAL
+we want to know where MR terminalis in our computer
+so we ask him that using the command
+pwd
+What does PWD stands for??
+(print working directory)
+3. Ls  (hey mr terminal can you please tell us that in your current
+location where you are standing
+what are the files and folders present over there)
+* folders are also called directories
+4.we want to ask MR terminal to move into another location from its
+current location
+(change the folder)
+cd foldername
+cd stands change directory
+5.HEy mr terminal can you move one folder back ???
+cd .. can be used to ask MR terminal to do that
+commands that we learned
+pwd ==>it gives the current location/folder/directory
+ls -->lists out all the content of the current directory/folder
+cd foldername ==> change the location to the specified folder name (if the
+folder is not present in the location
+where terminal is it will say no such file or directory)
+cd .. ==>go back one folder
+cd ~ ==> to move back Mr terminal to home directory
+-----------------------------------------------------------------
+*************************git class02********************
+What is a version?
+any chnages in the code
+Why do we need git and  github?
+makes our life very easy in order to manage our codes
+What is git?
+git is a version control tool.
+what is a repository?
+it is a storage area
+local repo--> git
+remote repo-->github
+what is  github?
+storage of our local repo on the internet./  remote repository
+how to communicate with git?
+Unix commands
+the first step whenever we want to keep track(store our codes using git)?
+the location where we will have the repository!!
+why do we need navigation commands?
+to move our Mr terminal to location where we want to have the repository!
+Commands for navigation:
+pwd-->it tells us the current location of terminal!
+ls-->to list all the files and folders present in the current location
+cd -->move our terminal to another directory/folder.
+cd ..--> to move our terminal one step back
+cd ~--> to move the terminal to home directory
+**************************
+Step1: Configuring our git  (one time procedure)
+-------------------
+Track our first project using GIT
+1. create a brand new java project
+a. tell the location where our project is (naviagte to the location of
+our project using terminal)
+**Initalize the repository
+git init
+Important concept---> Archtiecture of GIT
+3-stage architecture
+working directory -->the place where we have files of our project
+**git status--> tells us the current status of our staging area, repo and
+working directory
+untracked file--> appear in red color and it means that git is not
+tracking them right now
+tracked files(in staging area)--> appear in green color
+** git add filename  or git add . -->tells git which files to track
+commit--> saving your file in the repository
+**git commit -m "commit message"--> takes a snapshot of all files in
+staging area and save them to repo
+**git log--> it shows all the commits that we have in the repo
+
+********Review***********
+1. what is git?
+      it is a version control tool.
+2. What is a local repository?
+      a storage that is on our computer
+3. what is a remote repository?
+      GitHub
+4. Architecture of git :
+3-stage architecture--->working directory ,staging area, repo
+        working directory:  gitporject1 -->pom, src, target, .idea
+5. where should u create your local git repository?
+        Ideally you should create your repo inside your working directory/PROJECT
+        EXAMPLE: in this case gitProject1
+Note:
+One repo for one single project
+No subRepos are advised
+---------------------------Tracking your first project using git---------------------
+1. Decide the location where to create the repository and navigate my MR TERMINAL to that particular directory
+2. Initialize an empty repository
+     *git init   --> to initialize an empty repository
+HOW TO DELETE A LOCAL REPO-->simply delete the .git folder
+3.   *git status  --> shows your untracked files in red color
+                  --> shows you the tracked files in green color
+4. *git add . --> moves all the files to the staging area ..
+5. git commit -m "commit message" --> sends all the files from the
+staging area to the local repo
+6. git status after the commit shows working tree clean  becuase  we have
+all the three stages i.e working directory , staging area and local
+repo synchronised
+----------------------------Some Advance git commands-------------------------------
+1. to view the files in your staging area --> git ls-files
+2. to remove any file from the staging area --> git rm --cached filename
+3. to restore files from staging area to your wokring directory use -->
+git restore .
+4. in order to see the difference of the files in the staging area and
+wokring directory we
+can use the command -->git diff
+git diff  is going to show us ethe difference in each file that has
+been modified
+- usually means that the line was deleted and +means it was replaced
+by this line
+but that is not something that will alwyas be true
+u need to focus on line number also mentioned on the top like
+@@ -4,6 +4,6 @@  : shows the line number in hwich the changes were
+made
+5. shows difference in files in staging area and the  repository----->git
+diff --staged
+------------------------The gitignore file--------------------------------
+--
+to ignore the file from being tracked by git we use gitignore
+1. create a .gitignore file
+a. touch .gitignore--> creates a .gitignore file
+2. enter the name of the files that you want git to ignore from tracking
+and save the file
+--> that file will be ignored
+in order to ignore a complete folder write down the name of the folder
+in gitignore
+e.g if u want to ignore target folder in .gitignore type    target/
+-------------------------Sending our local repo to github-----------
+1. create a new remote repository
+2. Establish a connection --> git remote add origin URL
+3. check the connection  --> git remote -v
+4. to delete the connection --> git remote remove origin
+5. git branch -M main  -->naming the branch
+6. first time push "git push -u origin main"  for the rest of time just
+git push will work too.
+-----------------------Git Cloning----------------
+git clone helps us get the code from the remote repositories on our computer
