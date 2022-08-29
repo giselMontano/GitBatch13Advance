@@ -5,6 +5,6 @@ public class gitBasics {
     //CHECK TEMPERATURE AND PRINT OUT IF IS A GOOD DAY
 
     public static void main(String[] args) {
-        System.out.println("It is not a beautiful day");
+        System.out.println("It is not a beautiful day day");
     }
 }
