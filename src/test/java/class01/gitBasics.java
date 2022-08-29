@@ -6,5 +6,7 @@ public class gitBasics {
 
     public static void main(String[] args) {
         System.out.println("It is not a beautiful day day");
+        System.out.println("It is not a beautiful day day");
+        System.out.println("It is not a beautiful day day");
     }
 }
