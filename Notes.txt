@@ -113,30 +113,24 @@ No subRepos are advised
 HOW TO DELETE A LOCAL REPO-->simply delete the .git folder
 3.   *git status  --> shows your untracked files in red color
                   --> shows you the tracked files in green color
-4. *git add . --> moves all the files to the staging area ..
-5. git commit -m "commit message" --> sends all the files from the
-staging area to the local repo
-6. git status after the commit shows working tree clean  becuase  we have
-all the three stages i.e working directory , staging area and local
-repo synchronised
+4. *git add . --> moves all the files to the staging area
+5. *git commit -m "commit message" --> sends all the files from the staging area to the local repo.
+6. *git status after the commit shows "working tree clean"  because we have
+all the three stages-> working directory , staging area and local repo synchronised
+7. *git log--> shows you how many commits do you have
 ----------------------------Some Advance git commands-------------------------------
-1. to view the files in your staging area --> git ls-files
-2. to remove any file from the staging area --> git rm --cached filename
-3. to restore files from staging area to your wokring directory use -->
-git restore .
-4. in order to see the difference of the files in the staging area and
-wokring directory we
-can use the command -->git diff
-git diff  is going to show us ethe difference in each file that has
-been modified
-- usually means that the line was deleted and +means it was replaced
-by this line
-but that is not something that will alwyas be true
-u need to focus on line number also mentioned on the top like
-@@ -4,6 +4,6 @@  : shows the line number in hwich the changes were
-made
-5. shows difference in files in staging area and the  repository----->git
-diff --staged
+1. To view the files in your staging area   --> *git ls-files   THIS LS-FILE IS A HARDCODE
+2. To remove any file from the staging area --> *git rm --cached fileName   THIS FILENAME IS THE NAME OF THE FILE
+                                    Example -->  git rm --cached src -r   THIS LAST PART -r MUST BE ADDED BECAUSE src IS A FOLDER
+3. To restore files from staging area to your working directory use --> *git restore .
+ When you make a change in the code, and you have already saved the last code by the command (git add .) you can see the
+ difference between the code in staging  area and the one in working directory with the command (git diff)
+4. In order to see the difference of the files in the staging area and working directory we can use the command -->* git diff
+*git diff-->  is going to show us the difference in each file that has been modified
+- usually means that the line was deleted and +means it was replaced by this line
+but that is not something that will always be true you need to focus on line number also mentioned on the top like
+@@ -4,6 +4,6 @@  : shows the line number in which the changes were made
+5. shows difference in files in staging area and the  repository----->*git diff --staged
 ------------------------The gitignore file--------------------------------
 --
 to ignore the file from being tracked by git we use gitignore
